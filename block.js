@@ -14,6 +14,12 @@ class Block{
         Hash      : ${this.hash.substring(0, 10)}
         Data      : ${this.data}`;
     }
+
+    // Creates a genesis block, sem ter que instanciar o objeto
+    // e sem precisar passar os parâmetros do construtor
+    static genesis(){
+        return new this('Genesis time', '-----', 'f1r57-h45h', []);
+    }
 }
 
 module.exports = Block;
